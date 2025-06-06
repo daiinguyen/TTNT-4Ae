@@ -5,7 +5,7 @@ SAVE_PATH = './data/input_images'
 
 
 # Nhập tên người dùng
-name = input("Nhập tên của bạn (không dấu, không khoảng trắng): ").strip()
+name = input("Nhập tên: ").strip()
 if name == '':
     print("Tên không hợp lệ. Dừng chương trình.")
     exit()
@@ -18,8 +18,6 @@ cap = cv2.VideoCapture(0)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
-print("\n>>> Nhấn 'SPACE' để chụp và lưu ảnh.")
-print(">>> Nhấn 'ESC' để thoát mà không lưu.\n")
 
 while True:
     ret, frame = cap.read()
