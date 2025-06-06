@@ -4,7 +4,7 @@ This is a FaceNet and MTCNN inference from [this Repository](https://github.com/
     
     ```bash
     # Clone Repo:
-    git clone https://github.com/pewdspie24/FaceNet-Infer.git
+    git clone https://github.com/daiinguyen/TTNT-4Ae.git
     
     # Install with Pip
     pip install -r requirements.txt
