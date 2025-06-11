@@ -23,13 +23,13 @@ def align(img, landmarks):
         optimal_eye = (left_eye_x, right_eye_y)
         rot = 1 #cùng chiều kim đồng hồ
 
-    # cv2.circle(img, optimal_eye, radius=0, color=(0,0,255), thickness=3)
-    # cv2.circle(img, (left_eye_x, left_eye_y), radius=0, color=(0,0,255), thickness=3)
-    # cv2.circle(img, (right_eye_x, right_eye_y), radius=0, color=(0,0,255), thickness=3)
-    # image_center = tuple(np.array(img.shape[1::-1]) / 2)
-    # rot_mat = cv2.getRotationMatrix2D(image_center, 10, 1.0)
-    # img = cv2.warpAffine(img, rot_mat, img.shape[1::-1], flags=cv2.INTER_LINEAR)
-    # cv2.resize(img, (160,160))
+    cv2.circle(img, optimal_eye, radius=0, color=(0,0,255), thickness=3)
+    cv2.circle(img, (left_eye_x, left_eye_y), radius=0, color=(0,0,255), thickness=3)
+    cv2.circle(img, (right_eye_x, right_eye_y), radius=0, color=(0,0,255), thickness=3)
+    image_center = tuple(np.array(img.shape[1::-1]) / 2)
+    rot_mat = cv2.getRotationMatrix2D(image_center, 10, 1.0)
+    img = cv2.warpAffine(img, rot_mat, img.shape[1::-1], flags=cv2.INTER_LINEAR)
+    cv2.resize(img, (160,160))
 
     #tinh khoang cach euclide
     a = euclidean_dist(left_eye, optimal_eye)
